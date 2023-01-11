@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "docker stop weddingsite"
-                sh "docker rm weddingsite"
+                sh "docker stop weddingsite_container"
+                sh "docker rm weddingsite_container"
                 sh "docker rmi theearlofgray/weddingsite:latest"
                 sh "docker build -t theearlofgray/weddingsite:latest ."
                 sh "docker push theearlofgray/weddingsite:latest"
