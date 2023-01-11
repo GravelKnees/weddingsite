@@ -11,11 +11,6 @@ pipeline {
                 
             }
         }
-        stage('Test') {
-            steps {
-                //
-            }
-        }
         stage('Deploy') {
             steps {
                 sh "docker run -d -p 5000:5000 --name weddingsite_container theearlofgray/weddingsite:latest"
