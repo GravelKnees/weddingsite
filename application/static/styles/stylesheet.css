@@ -33,7 +33,7 @@ h1 {
 }
 
 img {
-    vertical-align: middle;
+    vertical-align: center;
 }
 
 /* Slideshow container */
@@ -76,4 +76,11 @@ img {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
