@@ -1,27 +1,56 @@
 
+<!--
+  TODO:
+    - Make all contents fill page vertically 
+    - Make gap between line on the left and center text
+    - Put navigation buttons in a horizontal row below center text
+    - Put images in left div
+-->
+
 {% extends 'base.html' %}
 
 {% block content %}
+<footer class="container-fluid text-center">
+  <p>Header</p>
+</footer>
 
-<div class="mySlides fade container">
-    <div class="numbertext">1 / 3</div>
-    <img src="{{ url_for('static',filename='images/Sophie&EarlPic01.jpg') }}" style="width:300px">
-  </div>
-  
-  <div class="mySlides fade container">
-    <div class="numbertext">2 / 3</div>
-    <img src="{{ url_for('static',filename='images/Sophie&EarlPic02.jpg') }}" style="width:300px">
-  </div>
-  
-  <div class="mySlides fade container">
-    <div class="numbertext">3 / 3</div>
-    <img src="{{ url_for('static',filename='images/Sophie&EarlPic03.jpg') }}" style="width:300px">
-  </div>
-  </div>
-  <div style="text-align:center">
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-  </div>
+<div class="container-fluid text-center my-columns row content">    
+  <div class="row content">
 
+    <div class="col-sm-2 sidenav left-side">
+      <p> LEFT COLUMN </p>
+    </div> 
+
+    <div class="col-sm-8 navbar-header"> 
+      <!-- INSERT CENTRE COLUMN CONTENTS-->
+        The Wedding of Sophie & Earl
+    </div>
+    <br>
+
+    <div class="col-sm-2">
+      <div class="well navbar-content bulletpoint-removal">
+        <p><a href="{{ url_for('home') }}"> | Home | </a></p>
+      </div>      
+      <div class="well navbar-content bulletpoint-removal">
+        <p><a href="{{ url_for('rspv') }}"> | RSPV | </a></p>
+      </div>
+      <div class="well navbar-content bulletpoint-removal">
+        <p><a href="{{ url_for('location') }}"> | Location |</a></p>
+      </div>
+      <div class="well navbar-content bulletpoint-removal">
+        <p><a href="{{ url_for('registry') }}"> | Registry |</a></p>
+      </div>
+      <!---
+      <div class="well navbar-content bulletpoint-removal">
+        <li><a href="{{ url_for('songrequests') }}"> | Song Requests | </a></li>
+      </div>
+      -->
+    </div>
+
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer</p>
+</footer>
 {% endblock content %}
